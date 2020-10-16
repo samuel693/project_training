@@ -1,6 +1,7 @@
 import 'package:easy_dialog/easy_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:training1/Screens/Categories.dart';
+import 'package:training1/Screens/MakeupMaster.dart';
 import 'package:training1/Widgets/grid_tile_makeup.dart';
 
 class MakeupProducts extends StatefulWidget {
@@ -69,7 +70,11 @@ class _MakeupProductsState extends State<MakeupProducts> {
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           children: [
             grid_tile_makeup("LUMINOS SILK\n\t FOUNDITION", "assets/products/makeup/1.jpg",_basicContentEasyDialog),
-            grid_tile_makeup("LUMINOS SILK\n\t FOUNDITION", "assets/products/makeup/2.jpg",(){}),
+            grid_tile_makeup("LUMINOS SILK\n\t FOUNDITION", "assets/products/makeup/2.jpg",(){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return MakeupMaster();
+              }));
+            }),
             grid_tile_makeup("LUMINOS SILK\n\t FOUNDITION", "assets/products/makeup/3.jpg",(){}),
             grid_tile_makeup("LUMINOS SILK\n\t FOUNDITION", "assets/products/makeup/4.jpg",(){}),
             grid_tile_makeup("LUMINOS SILK\n\t FOUNDITION", "assets/products/makeup/5.jpg",(){}),
